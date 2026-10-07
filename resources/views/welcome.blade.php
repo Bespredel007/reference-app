@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title', 'Головна сторінка')
-
+{{--  Lab 1 --}}
 @section('content')
     <div class="content-container">
 
@@ -59,4 +59,4 @@
         </div>
     </div>
 @endsection
-
+{{-- lab1 changes --}}

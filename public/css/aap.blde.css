@@ -110,3 +110,7 @@ footer {
 .footer-socials a:hover {
     text-decoration: underline;
 }
+.nav-left {
+    display: flex;
+    align-items: center;
+}

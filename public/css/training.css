@@ -1,0 +1,98 @@
+.training-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.training-card {
+    width: 100%;
+    max-width: 500px;
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.training-card--confirm {
+    text-align: center;
+}
+
+.training-title {
+    text-align: center;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+
+.training-title--success {
+    color: #4caf50;
+    margin-bottom: 15px;
+}
+
+.training-subtitle {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+.training-subtitle--confirm {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group--last {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #222;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.form-error {
+    color: #ff5252;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+
+.confirm-details {
+    text-align: left;
+    background: #222;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}

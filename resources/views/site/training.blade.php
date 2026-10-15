@@ -40,6 +40,13 @@
                     @enderror
                 </div>
 
+                <div class="form-group">
+                    <label for="date" class="form-label">Дата тренування:</label>
+                    <input type="date" id="date" name="date" value="{{ old('date') }}" class="form-control">
+                    @error('date')
+                    <p class="form-error">{{ $message }}</p>
+                    @enderror
+                </div>
                 <button type="submit" class="btn-submit">
                     Надіслати заявку
                 </button>

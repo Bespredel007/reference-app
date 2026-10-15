@@ -16,6 +16,7 @@
                 <p><strong>Ім'я:</strong> {{ $name }}</p>
                 <p><strong>Email:</strong> {{ $email }}</p>
                 <p><strong>Повідомлення:</strong> {{ $message }}</p>
+                <p><strong>Дата тренування:</strong> {{ $date }}</p>
             </div>
 
             <a href="{{ route('training.form') }}" class="btn-submit">

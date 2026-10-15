@@ -16,6 +16,7 @@ class TrainingRequest extends FormRequest
         return [
             'name'    => ['required', 'string', 'max:255'],
             'email'   => ['required', 'email'],
+            'date'    => ['required', 'date', 'after_or_equal:today'],
             'message' => ['required', 'string', 'min:5'],
         ];
     }
@@ -23,6 +24,9 @@ class TrainingRequest extends FormRequest
     public function messages(): array
     {
         return [
+            'date.required'       => 'Оберіть дату тренування.',
+            'date.date'           => 'Введіть коректну дату.',
+            'date.after_or_equal' => 'Дата тренування не може бути в минулому.',
             'name.required'    => 'Поле «Ім’я» є обов’язковим.',
             'email.required'   => 'Поле «Email» є обов’язковим.',
             'email.email'      => 'Введіть коректну електронну адресу.',

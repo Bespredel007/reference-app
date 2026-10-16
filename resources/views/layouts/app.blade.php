@@ -6,14 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>@yield('title', 'Лабораторний практикум')</title>
         <link rel="stylesheet" href="{{ asset('css/aap.blde.css') }}">
+        @stack('styles')
     </head>
     <body>
     <nav>
-        <a href="{{ url('/about') }}">Клуби</a>
-        <a href="{{ url('/contact') }}">Спеціалісти</a>
-        <a href="{{ url('/about') }}">Абонименти</a>
-        <a href="{{ url('/about') }}">Тренування</a>
-        <a href="{{ url('/about') }}">Про нас</a>
+        <div class="nav-left">
+            <a href="{{ route('entry.form') }}" class="nav-auth-btn"> Вхід </a>
+        </div>
+        <a href="{{ route('training.form') }}">Запис</a>
+        <a href="">Клуби</a>
+        <a href="{{ route('site.contact') }}">Спеціалісти</a>
+        <a href="">Абонементи</a>
+        <a href="">Тренування</a>
+        <a href="{{ route('site.about') }}">Про нас</a>
     </nav>
 
     <main>

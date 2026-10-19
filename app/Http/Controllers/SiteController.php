@@ -21,17 +21,6 @@ class SiteController extends Controller
     {
         return view('site.entry-confirm', $request->validated());
     }
-
-    // --- Індивідуальне завдання ---
-    public function training()
-    {
-        $clubTitle = 'Спорт клуб «Dungeon Gym»';
-        return view('site.training', ['clubTitle' => $clubTitle]);
-    }
-
-    public function trainingStore(TrainingRequest $request)
-    {
-        $data = $request->validated();
-        return view('site.training-confirm', $data);
-    }
 }
+
+

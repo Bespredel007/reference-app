@@ -15,7 +15,7 @@
         </div>
         <a href="{{ route('training.form') }}">Запис</a>
         <a href="">Клуби</a>
-        <a href="{{ route('site.contact') }}">Спеціалісти</a>
+        <a href="{{ route('specialists.index') }}">Спеціалісти</a>
         <a href="">Абонементи</a>
         <a href="">Тренування</a>
         <a href="{{ route('site.about') }}">Про нас</a>

@@ -250,3 +250,94 @@ nav svg {
     text-decoration: none;
     box-sizing: border-box;
 }
+.top-specialists-container {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #444;
+}
+
+.top-specialists-title {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.top-specialists-table {
+    text-align: center;
+}
+
+.top-specialists-table th.rank-col {
+    width: 15%;
+}
+.top-specialists-table th.views-col {
+    width: 30%;
+}
+
+.top-specialists-table .name-col {
+    text-align: left;
+}
+
+.rank-badge {
+    font-size: 1.1em;
+}
+
+.views-badge {
+    background-color: #333;
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    border: 1px solid #555;
+    display: inline-block;
+}
+
+.empty-cell {
+    text-align: center;
+    color: #888;
+}
+/* Фіксована ширина контейнера-картки топу */
+.form-container.top-container {
+    max-width: 650px;
+}
+
+/* Колонки таблиці топу спеціалістів */
+.top-specialists-table th.rank-col {
+    width: 20%;
+    text-align: center;
+}
+
+.top-specialists-table th.name-col {
+    text-align: left;
+}
+
+.top-specialists-table th.views-col {
+    width: 35%;
+    text-align: center;
+}
+
+/* Плашка (бейдж) кількості переглядів */
+.views-badge {
+    background-color: #333;
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    border: 1px solid #555;
+    display: inline-block;
+}
+
+/* Допоміжні класи, використані у таблиці топу */
+.text-center {
+    text-align: center;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.empty-cell {
+    text-align: center;
+    color: #888888;
+}
+

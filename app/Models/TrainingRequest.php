@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Models;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -18,6 +18,7 @@ class TrainingRequest extends FormRequest
             'email'   => ['required', 'email'],
             'date'    => ['required', 'date', 'after_or_equal:today'],
             'message' => ['required', 'string', 'min:5'],
+            'time'    => ['required', 'date_format:H:i'],
         ];
     }
 
@@ -32,6 +33,8 @@ class TrainingRequest extends FormRequest
             'email.email'      => 'Введіть коректну електронну адресу.',
             'message.required' => 'Поле «Повідомлення» не може бути порожнім.',
             'message.min'      => 'Повідомлення має містити щонайменше 5 символів.',
+            'time.required'       => 'Оберіть час тренування.',
+            'time.date_format'    => 'Вкажіть коректний час.',
         ];
     }
 }

@@ -1,17 +1,20 @@
 @extends('layouts.app')
+
 @section('title', 'Спеціалісти клубу')
+
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/specialists.css') }}">
 
     <div class="main-container">
         <h1>Наші Спеціалісти</h1>
 
-        <div style="text-align: center;">
-            <a href="{{ route('specialists.create') }}" class="add-btn">
-                + Додати спеціаліста
+        <div>
+            <a href="{{ route('specialists.top') }}" class="add-btn">
+                Топ спеціалістів
             </a>
         </div>
-        <!--  фільтрація  -->
+
+        <!-- Фільтрація -->
         <div class="filter-container">
             <form action="{{ route('specialists.index') }}" method="GET">
                 <label for="specialtyFilter" class="filter-label">Фільтр за спеціальністю:</label>
@@ -63,8 +66,13 @@
             </tbody>
         </table>
 
-        <!-- Квадратики  -->
+        <!-- Пагінація -->
         {{ $specialists->links() }}
-    </div>
 
+        <div class="text-center" style="margin-top: 25px;">
+            <a href="{{ route('specialists.create') }}" class="add-btn">
+                + Додати спеціаліста
+            </a>
+        </div>
+    </div>
 @endsection

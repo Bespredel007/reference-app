@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\TrainingRequest;
+use App\Models\TrainingRequest;
 
 class TrainingController extends Controller
 {

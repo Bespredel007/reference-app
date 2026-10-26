@@ -32,6 +32,9 @@
             <a href="#">Instagram</a> |
             <a href="#">Facebook</a> |
             <a href="#">Telegram</a>
+            <div style="margin-top: 20px;text-align: center;">
+                <a href="{{ route('stats.pages') }}" style="padding: 10px 15px; background: #007bff; color: white; text-decoration: none; border-radius: 5px;">Переглянути статистику</a>
+            </div>
         </div>
         <p>&copy; {{ date('Y') }} КПІ ім. Ігоря Сікорського</p>
     </footer>

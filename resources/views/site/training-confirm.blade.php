@@ -20,7 +20,7 @@
                 <p><strong>Час тренування:</strong> {{ $time }}</p>
             </div>
 
-            <a href="{{ route('training.form') }}" class="btn-submit">
+            <a href="{{ route('training.index') }}" class="btn-submit">
                 Надіслати ще одну заявку
             </a>
         </div>

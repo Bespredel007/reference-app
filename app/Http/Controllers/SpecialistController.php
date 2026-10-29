@@ -17,7 +17,6 @@ class SpecialistController extends Controller
             $query->where('specialty', 'like', '%' . $request->specialty . '%');
         }
         $specialists = $query->paginate(4)->withQueryString();
-
         return view('specialists.index', compact('specialists'));
     }
     public function top()

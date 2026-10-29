@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\TrainingController;
+use App\Http\Controllers\SpecialistController;
 use App\Http\Middleware\TrackVisit;
 use App\Http\Controllers\StatsController;
 
@@ -19,7 +20,8 @@ Route::get('/entry', [SiteController::class, 'entry'])->name('entry.form');
 Route::post('/entry', [SiteController::class, 'entryStore'])->name('entry.store');
 Route::view('/about', 'site.about')->name('site.about');
 Route::view('/contact', 'site.contact')->name('site.contact');
-Route::get('/training', [TrainingController::class, 'index'])->name('training.form');
-Route::post('/training', [TrainingController::class, 'store'])->name('training.store');
+//Route::get('/training', [TrainingController::class, 'index'])->name('training.form');
+//Route::post('/training', [TrainingController::class, 'store'])->name('training.store');
+Route::resource('training', TrainingController::class);
 Route::get('/specialists/top', [SpecialistController::class, 'top'])->name('specialists.top');
 Route::resource('specialists', SpecialistController::class);

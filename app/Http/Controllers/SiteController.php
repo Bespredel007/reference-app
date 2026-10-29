@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\EntryRequest;
-use App\Http\Requests\TrainingRequest;
 
 class SiteController extends Controller
 {

@@ -17,9 +17,10 @@
                 <p><strong>Email:</strong> {{ $email }}</p>
                 <p><strong>Повідомлення:</strong> {{ $message }}</p>
                 <p><strong>Дата тренування:</strong> {{ $date }}</p>
+                <p><strong>Час тренування:</strong> {{ $time }}</p>
             </div>
 
-            <a href="{{ route('training.form') }}" class="btn-submit">
+            <a href="{{ route('training.index') }}" class="btn-submit">
                 Надіслати ще одну заявку
             </a>
         </div>

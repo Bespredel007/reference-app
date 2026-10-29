@@ -47,6 +47,13 @@
                     <p class="form-error">{{ $message }}</p>
                     @enderror
                 </div>
+                <div class="form-group form-group--last">
+                    <label for="time" class="form-label">Час тренування:</label>
+                    <input type="time" id="time" name="time" value="{{ old('time') }}" class="form-control">
+                    @error('time')
+                    <p class="form-error">{{ $message }}</p>
+                    @enderror
+                </div>
                 <button type="submit" class="btn-submit">
                     Надіслати заявку
                 </button>

@@ -1,0 +1,74 @@
+.stats-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    color: #000000;
+}
+.stats-title {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.stats-subtitle {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+.stats-nav {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.stats-nav a {
+    color: #007bff;
+    text-decoration: none;
+}
+.stats-nav a:hover {
+    text-decoration: underline;
+}
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #000000;
+    margin-top: 15px;
+    table-layout: fixed;
+}
+.stats-table thead tr {
+    background-color: #f2f2f2;
+}
+.stats-table th,
+.stats-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+.stats-table th.text-left {
+    text-align: left;
+}
+
+.stats-table .text-center {
+    text-align: center;
+}
+.stats-table td a {
+    color: #007bff;
+    text-decoration: none;
+    word-break: break-all;
+}
+.stats-table td a:hover {
+    text-decoration: underline;
+}
+.stats-table .empty-cell {
+    padding: 15px;
+    text-align: center;
+    color: #6c757d;
+}
+.pagination-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}

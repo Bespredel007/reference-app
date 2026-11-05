@@ -7,11 +7,14 @@ use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\SpecialistController;
 use App\Http\Middleware\TrackVisit;
 use App\Http\Controllers\StatsController;
-
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\NewsController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/news', [NewsController::class, 'index'])->name('news.index');
+Route::get('/blog/admin', [BlogController::class, 'admin'])->name('blog.admin');
+Route::resource('blog', BlogController::class);
 Route::get('/stats/detail', [App\Http\Controllers\StatsController::class, 'detail'])->name('stats.detail');
 Route::get('/stats', [StatsController::class, 'pages'])->name('stats.pages');
 Route::resource('country', CountryController::class);

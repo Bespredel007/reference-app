@@ -16,7 +16,7 @@
         <a href="{{ route('training.index') }}">Запис</a>
         <a href="">Клуби</a>
         <a href="{{ route('specialists.index') }}">Спеціалісти</a>
-        <a href="">Абонементи</a>
+        <a href="{{ route('news.index')}}">Новини</a>
         <a href="">Тренування</a>
         <a href="{{ route('site.about') }}">Про нас</a>
     </nav>

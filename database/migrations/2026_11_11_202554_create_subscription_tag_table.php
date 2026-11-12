@@ -8,10 +8,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('subscription_tag', function (Blueprint $table) {
-            $table->id();
             $table->foreignId('subscription_id')->constrained('subscriptions')->onDelete('cascade');
             $table->foreignId('tag_id')->constrained('tags')->onDelete('cascade');
-            $table->timestamps();
+            $table->primary(['subscription_id', 'tag_id']);
         });
     }
 

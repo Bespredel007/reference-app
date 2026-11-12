@@ -17,8 +17,6 @@ Route::get('/', function () {
 Route::resource('subscriptions', SubscriptionController::class);
 Route::get('/blog/{blog}/tags', [BlogController::class, 'tags'])->name('blog.tags');
 Route::post('/blog/{blog}/tags', [BlogController::class, 'tagsStore'])->name('blog.tags.store');
-Route::get('/blog/{blog}/tags', [BlogController::class, 'tags'])->name('blog.tags');
-Route::post('/blog/{blog}/tags', [BlogController::class, 'tagsStore'])->name('blog.tags.store');
 Route::resource('filters', FilterController::class)->except(['show']);
 Route::get('/news', [NewsController::class, 'index'])->name('news.index');
 Route::get('/blog/admin', [BlogController::class, 'admin'])->name('blog.admin');

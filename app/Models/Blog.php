@@ -29,4 +29,13 @@ class Blog extends Model
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
+    public function filters(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    {
+        return $this->belongsToMany(
+            Filter::class,
+            'blog_filter',
+            'blog_id',
+            'filter_id'
+        );
+    }
 }

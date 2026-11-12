@@ -1,0 +1,251 @@
+.subscriptions-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.subscriptions-header {
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.subscriptions-header .blog-page-title {
+    margin-bottom: 0;
+}
+
+.subscriptions-header .add-btn {
+    margin-bottom: 0;
+}
+
+
+.subscriptions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.subscription-title {
+    margin-bottom: 12px;
+}
+
+.subscription-description {
+    color: #cccccc;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Блок додаткових послуг/тегів */
+.subscription-tags-box {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #2a2a2a;
+    width: 100%;
+}
+
+.subscription-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.subscription-no-tags {
+    color: #777777;
+    font-size: 13px;
+}
+
+.subscription-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.subscriptions-empty {
+    color: #888888;
+    grid-column: 1 / -1;
+    padding: 40px;
+}
+
+.subscriptions-pagination {
+    margin-top: 30px;
+}
+
+.subscription-show-card {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 35px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.subscription-show-title {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.subscription-show-price {
+    color: #ff4500;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.subscription-show-desc {
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.subscription-show-tags-title {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.subscription-form-card {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.form-group-custom {
+    margin-bottom: 22px;
+}
+
+.form-label-custom {
+    display: block;
+    color: #ff4500;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.form-input-custom {
+    width: 100%;
+    background-color: #242424;
+    border: 1px solid #3a3a3a;
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-input-custom:focus {
+    border-color: #ff4500;
+}
+
+.form-textarea-custom {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.form-error-text {
+    color: #ff4d4d;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+/* Кнопки дій */
+.btn-secondary-custom {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid #555555;
+    color: #cccccc;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-custom:hover {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.btn-danger-custom {
+    background-color: transparent;
+    border: 1px solid #dc3545;
+    color: #dc3545;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-danger-custom:hover {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+/* Стилізація Select2 під темну тему сайту */
+.select2-container--default .select2-selection--multiple {
+    background-color: #242424 !important;
+    border: 1px solid #3a3a3a !important;
+    border-radius: 6px !important;
+    min-height: 44px !important;
+    padding: 4px 8px !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #ff4500 !important;
+    border: none !important;
+    color: #ffffff !important;
+    border-radius: 4px !important;
+    padding: 3px 8px !important;
+    margin-top: 4px !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #ffffff !important;
+    margin-right: 5px !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+    color: #000000 !important;
+}
+
+
+.select2-dropdown {
+    background-color: #242424 !important;
+    border: 1px solid #3a3a3a !important;
+    color: #ffffff !important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #ff4500 !important;
+    color: #ffffff !important;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: #333333 !important;
+    color: #aaaaaa !important;
+}
+
+.select2-search__field {
+    color: #ffffff !important;
+}
+.select2-container--default .select2-results__option {
+    color: #ffffff !important;
+    background-color: #242424 !important;
+}
+
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #ff4500 !important;
+    color: #ffffff !important;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: #333333 !important;
+    color: #aaaaaa !important;
+}

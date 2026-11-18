@@ -1,21 +1,29 @@
 @extends('layouts.app')
-@section('title', 'Блог')
-
+@section('title', 'Список публікацій')
 @section('content')
-    <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
-    <div class="content-container">
-        <h1 style="text-align: center; color: #ff4500; margin-bottom: 30px;">Блог</h1>
-
-        <div class="blog-grid">
-            @forelse ($blogs as $blog)
-                @include('blog._item', ['blog' => $blog])
-            @empty
-                <p style="text-align: center;">Записів поки немає.</p>
-            @endforelse
+    <nav class="blog-filters">
+        <a href="{{ route('blog.index') }}">Усі записи</a>
+        @foreach ($filters as $id => $name)
+            <a href="{{ route('blog.index', ['filter' => $id]) }}">
+                {{ $name }}
+            </a>
+        @endforeach
+    </nav>
+    <br>
+    @foreach ($blogs as $blog)
+        <div class="info">
+            <div class="card-text">
+                <h2>{{ $blog->title }}</h2>
+                <p>{{ $blog->description }}</p>
+                <div class="tags">
+                    @foreach ($blog->filters as $filter)
+                        <span class="tag">{{ $filter->filter_name }}</span>
+                    @endforeach
+                </div>
+                <br>
+                <a href="{{ route('blog.show', $blog) }}">Читати далі</a>
+            </div>
         </div>
-
-        <div style="display: flex; justify-content: center; margin-top: 30px;">
-            {{ $blogs->links() }}
-        </div>
-    </div>
+    @endforeach
+    {{ $blogs->links() }}
 @endsection

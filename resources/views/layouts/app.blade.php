@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>@yield('title', 'Лабораторний практикум')</title>
         <link rel="stylesheet" href="{{ asset('css/aap.blde.css') }}">
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
         @stack('styles')
     </head>
     <body>
@@ -15,6 +16,7 @@
         </div>
         <a href="{{ route('training.index') }}">Запис</a>
         <a href="">Клуби</a>
+        <a href="{{ route('subscriptions.index') }}">Абонементи</a>
         <a href="{{ route('specialists.index') }}">Спеціалісти</a>
         <a href="{{ route('news.index')}}">Новини</a>
         <a href="">Тренування</a>

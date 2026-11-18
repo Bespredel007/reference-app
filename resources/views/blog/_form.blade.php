@@ -46,3 +46,16 @@
     <p class="error-msg">{{ $message }}</p>
     @enderror
 </div>
+<div class="card-text">
+    <label for="filters">Мітки (Select2)</label>
+    <select id="filters" name="filters[]" multiple>
+        @foreach ($filters as $id => $name)
+            <option value="{{ $id }}" @selected(in_array($id, old('filters', $selected ?? [])))>
+                {{ $name }}
+            </option>
+        @endforeach
+    </select>
+    @error('filters')
+    <p class="error">{{ $message }}</p>
+    @enderror
+</div>

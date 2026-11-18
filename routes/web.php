@@ -14,6 +14,7 @@ use App\Http\Controllers\SubscriptionController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/subscriptions/admin', [SubscriptionController::class, 'admin'])->name('subscriptions.admin');
 Route::resource('subscriptions', SubscriptionController::class);
 Route::get('/blog/{blog}/tags', [BlogController::class, 'tags'])->name('blog.tags');
 Route::post('/blog/{blog}/tags', [BlogController::class, 'tagsStore'])->name('blog.tags.store');

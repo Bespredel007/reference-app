@@ -38,6 +38,7 @@ nav[role="navigation"] svg {
     height: 16px;
 }
 
+/* Сітка карток блогу */
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -78,50 +79,6 @@ nav[role="navigation"] svg {
     flex-grow: 1;
 }
 
-.back-link-container {
-    margin-bottom: 20px;
-}
-
-
-.blog-card-single {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.blog-card-single .blog-category {
-    color: #ff4500;
-    font-weight: bold;
-}
-
-.blog-single-title {
-    text-align: left;
-    margin: 10px 0;
-}
-
-.blog-card-single .blog-meta {
-    color: #888888;
-    margin-bottom: 20px;
-}
-
-.blog-lead-description {
-    font-size: 1.1em;
-    color: #dddddd;
-    font-style: italic;
-    margin-bottom: 20px;
-}
-
-.blog-text {
-    line-height: 1.6;
-    color: #cccccc;
-}
-.blog-category {
-    font-size: 13px;
-    color: #ff4500;
-    font-weight: 600;
-    margin-bottom: 12px;
-}
-
 .blog-card-body h2 {
     margin: 0 0 10px 0;
     font-size: 20px;
@@ -137,18 +94,93 @@ nav[role="navigation"] svg {
     color: #ff4500;
 }
 
-.blog-meta {
-    font-size: 13px;
-    color: #888888;
-    margin-bottom: 15px;
-}
-
 .blog-card-body p {
     color: #cccccc;
     line-height: 1.5;
     margin-bottom: 20px;
 }
 
+/* Окрема сторінка запису */
+.back-link-container {
+    margin-bottom: 20px;
+}
+
+.blog-card-single {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.blog-single-title {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.blog-category {
+    font-size: 13px;
+    color: #ff4500;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.blog-card-single .blog-category {
+    font-size: inherit;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.blog-meta {
+    font-size: 13px;
+    color: #888888;
+    margin-bottom: 15px;
+}
+
+.blog-card-single .blog-meta {
+    font-size: inherit;
+    margin-bottom: 20px;
+}
+
+.blog-lead-description {
+    font-size: 1.1em;
+    color: #dddddd;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.blog-text {
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+/* Мітки (теги) */
+.blog-card-single .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    min-height: auto;
+    height: auto;
+    padding: 15px 0;
+    margin-top: 15px;
+    background-color: transparent;
+    border-top: 1px solid #2a2a2a;
+}
+
+.tag-item,
+.tag {
+    display: inline-block;
+    background-color: #2a2a2a;
+    border: 1px solid #ff4500;
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 2px;
+}
+
+/* Адміністративна таблиця */
 .blog-table {
     width: 100%;
     border-collapse: collapse;
@@ -159,7 +191,8 @@ nav[role="navigation"] svg {
     margin-bottom: 20px;
 }
 
-.blog-table th, .blog-table td {
+.blog-table th,
+.blog-table td {
     padding: 15px;
     text-align: center;
     border-bottom: 1px solid #2a2a2a;
@@ -172,19 +205,22 @@ nav[role="navigation"] svg {
     font-weight: 600;
 }
 
-.blog-table tr:hover {
-    background-color: #252525;
-}
-
+.blog-table th a,
 .blog-table td a {
     color: #ff4500;
     text-decoration: none;
 }
 
+.blog-table th a:hover,
 .blog-table td a:hover {
     text-decoration: underline;
 }
 
+.blog-table tr:hover {
+    background-color: #252525;
+}
+
+/* Кнопки та форми */
 .blog-btn {
     background-color: transparent;
     border: 1px solid #ff4500;
@@ -234,35 +270,11 @@ nav[role="navigation"] svg {
     font-size: 13px;
     margin-top: 5px;
 }
-/* (+) */
+
 .add-btn {
     margin-right: 20px;
     font-weight: bold;
     padding: 8px 15px;
-}
-.blog-card-single .tags-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-    min-height: auto;
-    height: auto;
-    padding: 15px 0;
-    margin-top: 15px;
-    background-color: transparent;
-    border-top: 1px solid #2a2a2a;
-}
-
-.tag-item {
-    display: inline-block;
-    background-color: #2a2a2a;
-    border: 1px solid #ff4500;
-    color: #ffffff;
-    padding: 5px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 500;
 }
 
 .actions-container {
@@ -290,19 +302,84 @@ nav[role="navigation"] svg {
     border-color: #e03e00;
     color: #ffffff;
 }
-.select2-container--default .select2-results__option {
+
+/* Select2 */
+.select2-container--default .select2-results__option,
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display,
+.select2-container--default .select2-search--inline .select2-search__field {
     color: #000000 !important;
 }
+
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
     color: #000000 !important;
     background-color: #e4e4e4 !important;
     border: 1px solid #cccccc !important;
 }
 
-.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
-    color: #000000 !important;
+/* Форма фільтрації в адмін-панелі */
+.blog-filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 14px;
+    background-color: #1e1e1e;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 20px auto;
+    max-width: 100%;
 }
 
-.select2-container--default .select2-search--inline .select2-search__field {
-    color: #000000 !important;
+.blog-filter-form .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 170px;
+    flex: 1 1 170px;
+}
+
+.blog-filter-form .filter-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #ff4500;
+}
+
+.blog-filter-form input[type="text"],
+.blog-filter-form select {
+    background-color: #141414;
+    color: #ffffff;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.blog-filter-form input[type="text"]::placeholder {
+    color: #888888;
+}
+
+.blog-filter-form input[type="text"]:focus,
+.blog-filter-form select:focus {
+    border-color: #ff4500;
+}
+
+.blog-filter-form .filter-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.blog-filter-form .blog-btn,
+.blog-filter-form .action-link {
+    margin: 0;
+    padding: 8px 16px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: nowrap;
 }

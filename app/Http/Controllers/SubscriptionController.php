@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Subscription;
 use App\Models\Tag;
+use App\Queries\SubscriptionFilter;
 use Illuminate\Http\Request;
 
 class SubscriptionController extends Controller
@@ -13,6 +14,26 @@ class SubscriptionController extends Controller
         $subscriptions = Subscription::with('tags')->latest()->paginate(10);
         return view('subscriptions.index', compact('subscriptions'));
     }
+
+    public function admin(Request $request, SubscriptionFilter $filter)
+    {
+        $input = $request->validate([
+            'title'   => ['nullable', 'string', 'max:255'],
+            'tagName' => ['nullable', 'string', 'max:100'],
+            'tag_id'  => ['nullable', 'integer', 'exists:tags,id'],
+            'sort'    => ['nullable', 'string', 'max:30'],
+        ]);
+
+        $subscriptions = $filter->apply($input)
+            ->paginate(10)
+            ->withQueryString();
+
+        return view('subscriptions.admin', [
+            'subscriptions' => $subscriptions,
+            'tags'          => Tag::orderBy('name')->pluck('name', 'id'),
+        ]);
+    }
+
     public function create()
     {
         return view('subscriptions.create', [

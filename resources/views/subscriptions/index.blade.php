@@ -1,15 +1,21 @@
 @extends('layouts.app')
+
 @section('title', 'Абонементи')
+
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
     <link rel="stylesheet" href="{{ asset('css/subscriptions.css') }}">
+
     <div class="content-container subscriptions-container">
         <div class="flex-center subscriptions-header">
             <h1 class="blog-page-title">Абонементи фітнес-центру</h1>
-            <a href="{{ route('subscriptions.create') }}" class="action-link add-btn">
-                + Додати абонемент
-            </a>
+            @auth
+                <a href="{{ route('subscriptions.create') }}" class="action-link add-btn">
+                    + Додати абонемент
+                </a>
+            @endauth
         </div>
+
         <div class="blog-grid subscriptions-grid">
             @forelse($subscriptions as $subscription)
                 <div class="blog-card">
@@ -35,7 +41,9 @@
 
                         <div class="actions-container subscription-actions">
                             <a href="{{ route('subscriptions.show', $subscription) }}" class="blog-btn">Переглянути</a>
-                            <a href="{{ route('subscriptions.edit', $subscription) }}" class="blog-btn">Редагувати</a>
+                            @auth
+                                <a href="{{ route('subscriptions.edit', $subscription) }}" class="blog-btn">Редагувати</a>
+                            @endauth
                         </div>
                     </div>
                 </div>

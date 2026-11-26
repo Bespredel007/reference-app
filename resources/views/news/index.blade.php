@@ -1,5 +1,7 @@
 @extends('layouts.app')
+
 @section('title', 'Новини клубу')
+
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
     <div class="content-container">

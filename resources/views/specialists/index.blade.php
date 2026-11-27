@@ -27,6 +27,7 @@
                 </select>
             </form>
         </div>
+
         <table>
             <thead>
             <tr>
@@ -36,7 +37,9 @@
                 <th>Досвід роботи</th>
                 <th>Телефон</th>
                 <th>Вартість тренування</th>
-                <th>Дії</th>
+                @auth
+                    <th>Дії</th>
+                @endauth
             </tr>
             </thead>
             <tbody>
@@ -56,11 +59,13 @@
                     <td>{{ $spec->experience }} років</td>
                     <td>{{ $spec->phone }}</td>
                     <td>{{ $spec->price }} грн</td>
-                    <td>
-                        <a href="{{ route('specialists.edit', $spec) }}" class="action-link">
-                            Редагувати
-                        </a>
-                    </td>
+                    @auth
+                        <td>
+                            <a href="{{ route('specialists.edit', $spec) }}" class="action-link">
+                                Редагувати
+                            </a>
+                        </td>
+                    @endauth
                 </tr>
             @endforeach
             </tbody>
@@ -69,10 +74,12 @@
         <!-- Пагінація -->
         {{ $specialists->links() }}
 
-        <div class="text-center" style="margin-top: 25px;">
-            <a href="{{ route('specialists.create') }}" class="add-btn">
-                + Додати спеціаліста
-            </a>
-        </div>
+        @auth
+            <div class="text-center" style="margin-top: 25px;">
+                <a href="{{ route('specialists.create') }}" class="add-btn">
+                    + Додати спеціаліста
+                </a>
+            </div>
+        @endauth
     </div>
 @endsection

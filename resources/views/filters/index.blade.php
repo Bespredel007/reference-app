@@ -9,9 +9,11 @@
     <div class="content-container subscriptions-container">
         <div class="flex-center subscriptions-header">
             <h1 class="blog-page-title">Довідник міток</h1>
-            <a href="{{ route('filters.create') }}" class="action-link add-btn">
-                + Додати мітку
-            </a>
+            @auth
+                <a href="{{ route('filters.create') }}" class="action-link add-btn">
+                    + Додати мітку
+                </a>
+            @endauth
         </div>
 
         <div class="blog-grid subscriptions-grid">
@@ -26,14 +28,16 @@
                             <p class="subscription-description">{{ $filter->filter_description }}</p>
                         @endif
 
-                        <div class="actions-container subscription-actions">
-                            <a href="{{ route('filters.edit', $filter) }}" class="blog-btn">Редагувати</a>
-                            <form action="{{ route('filters.destroy', $filter) }}" method="POST" onsubmit="return confirm('Ви дійсно бажаєте видалити цю мітку?');">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn-danger-custom">Видалити</button>
-                            </form>
-                        </div>
+                        @auth
+                            <div class="actions-container subscription-actions">
+                                <a href="{{ route('filters.edit', $filter) }}" class="blog-btn">Редагувати</a>
+                                <form action="{{ route('filters.destroy', $filter) }}" method="POST" onsubmit="return confirm('Ви дійсно бажаєте видалити цю мітку?');">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn-danger-custom">Видалити</button>
+                                </form>
+                            </div>
+                        @endauth
                     </div>
                 </div>
             @empty
